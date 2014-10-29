@@ -19,6 +19,7 @@ int main(int args, char* argv[]) {
 	renderer* renderer_ = renderer::getInstance();
 
 	clock.restart();
+	// Game
 	while (renderer_->isWindowOpen()) {
 		frameStart = clock.getElapsedTime();
 		// Update renderer. Events, drawing, etc.

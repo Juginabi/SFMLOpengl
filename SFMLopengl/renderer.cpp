@@ -34,10 +34,6 @@ bool renderer::isWindowOpen() {
 }
 
 void renderer::update(sf::Time elapsed) {
-	// Check for events
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	// Create and compile our GLSL program from the shaders
-
 	// GL-code start for triangle
 	GLuint VertexArrayID;
 	glGenVertexArrays(1, &VertexArrayID);
@@ -93,8 +89,9 @@ void renderer::update(sf::Time elapsed) {
 			break;
 		case sf::Event::Resized:
 			// Resize viewport
-			//glViewport(0, 0, event.size.width, event.size.height);
+			glViewport(0, 0, event_.size.width, event_.size.height);
 			break;
 		}
 	}
+	lastUpdateTime_ = elapsed;
 }
