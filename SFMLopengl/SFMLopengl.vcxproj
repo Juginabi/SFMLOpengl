@@ -71,10 +71,27 @@
     <ClCompile Include="common.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="renderer.cpp" />
+    <ClCompile Include="scene\component.cpp" />
+    <ClCompile Include="scene\components\gocAI.cpp" />
+    <ClCompile Include="scene\components\gocTransform.cpp" />
+    <ClCompile Include="scene\components\gocVisual.cpp" />
+    <ClCompile Include="scene\components\gocVisualRectangle.cpp" />
+    <ClCompile Include="scene\components\gocVisualSphere.cpp" />
+    <ClCompile Include="scene\gameObject.cpp" />
+    <ClCompile Include="scene\gameObjectManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h" />
+    <ClInclude Include="commonTypeDefs.h" />
     <ClInclude Include="renderer.h" />
+    <ClInclude Include="scene\component.h" />
+    <ClInclude Include="scene\components\gocAI.h" />
+    <ClInclude Include="scene\components\gocTransform.h" />
+    <ClInclude Include="scene\components\gocVisual.h" />
+    <ClInclude Include="scene\components\gocVisualRectangle.h" />
+    <ClInclude Include="scene\components\gocVisualSphere.h" />
+    <ClInclude Include="scene\gameObject.h" />
+    <ClInclude Include="scene\gameObjectManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

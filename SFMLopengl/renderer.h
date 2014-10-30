@@ -11,11 +11,14 @@ class renderer {
 	// Instance of this class. Singleton.
 	static renderer* renderer_;
 
-	// This is just for testing shaders
-	GLuint programID_;
-
 	// Last frametime when update was called
 	sf::Time lastUpdateTime_;
+
+	// This will identify our vertex buffer
+	GLuint vertexbuffer;
+
+	// This is just for testing shaders
+	GLuint programID_;
 
 protected:
 	// Protected constructor because singleton

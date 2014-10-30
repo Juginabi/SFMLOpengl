@@ -5,6 +5,12 @@
 #include <SFML\System.hpp>
 #include "common.h"
 #include "renderer.h"
+// #include "scene\gameObjectManager.h"
+#include "scene\gameObject.h"
+#include "scene\component.h"
+#include "scene\components\gocTransform.h"
+#include "scene\components\gocVisual.h"
+#include "scene\components\gocVisualRectangle.h"
 
 int main(int args, char* argv[]) {
 
@@ -19,7 +25,11 @@ int main(int args, char* argv[]) {
 	renderer* renderer_ = renderer::getInstance();
 
 	clock.restart();
-	// Game
+
+	GameObject *obj = new GameObject("Rectangle");
+	obj->attachComponent(new GocVisualRectangle());
+
+	// Gameloop
 	while (renderer_->isWindowOpen()) {
 		frameStart = clock.getElapsedTime();
 		// Update renderer. Events, drawing, etc.
@@ -27,7 +37,7 @@ int main(int args, char* argv[]) {
 
 		// Sleep for rest of the 16ms left.
 		sf::Time sleepDuration = frameBudget - (frameStart - clock.getElapsedTime());
-		std::cout << "Sleeping for " << sleepDuration.asMilliseconds() << " - frameTime: " << frameStart.asMilliseconds() <<  std::endl;
+		//std::cout << "Sleeping for " << sleepDuration.asMilliseconds() << " - frameTime: " << frameStart.asMilliseconds() <<  std::endl;
 		sf::sleep(sleepDuration);
 	}
 
