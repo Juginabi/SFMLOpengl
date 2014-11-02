@@ -1,7 +1,8 @@
 #pragma once
 
 // Project specific headers
-#include "component.h"
+// #include "component.h"
+class Component;
 #include "../commonTypeDefs.h"
 
 // GameObject (GO) class is the database key in GameObject/GameObjectComponent-map.

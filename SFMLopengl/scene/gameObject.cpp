@@ -3,6 +3,7 @@
 #endif
 #include <memory>
 #include "gameObject.h"
+#include "component.h"
 
 GameObject::GameObject(go_type_name _myID) :
     myID_(_myID) {
