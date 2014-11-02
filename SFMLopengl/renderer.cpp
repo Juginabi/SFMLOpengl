@@ -61,7 +61,7 @@ bool renderer::isWindowOpen() {
 
 void renderer::update(sf::Time elapsed) {		
 
-	// 1rst attribute buffer : vertices
+	// 1st attribute buffer : vertices
 	glEnableVertexAttribArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
 	glVertexAttribPointer(

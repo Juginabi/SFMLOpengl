@@ -1,5 +1,5 @@
-#include "SFML/Window.hpp"
-#include "SFML/OpenGL.hpp"
+#include <SFML/Window.hpp>
+#include <SFML/OpenGL.hpp>
 
 class renderer {
 	// Render window

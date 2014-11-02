@@ -1,16 +1,16 @@
 #include <iostream>
 #include <GL\glew.h>
-#include <SFML\OpenGL.hpp>
-#include <SFML\Window.hpp>
-#include <SFML\System.hpp>
+#include <SFML/OpenGL.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/System.hpp>
 #include "common.h"
 #include "renderer.h"
 // #include "scene\gameObjectManager.h"
-#include "scene\gameObject.h"
-#include "scene\component.h"
-#include "scene\components\gocTransform.h"
-#include "scene\components\gocVisual.h"
-#include "scene\components\gocVisualRectangle.h"
+#include "scene/gameObject.h"
+#include "scene/component.h"
+#include "scene/components\gocTransform.h"
+#include "scene/components\gocVisual.h"
+#include "scene/components\gocVisualRectangle.h"
 
 int main(int args, char* argv[]) {
 
@@ -28,6 +28,8 @@ int main(int args, char* argv[]) {
 
 	GameObject *obj = new GameObject("Rectangle");
 	obj->attachComponent(new GocVisualRectangle());
+	Component* comp = obj->getComponent("GocVisual");
+
 
 	// Gameloop
 	while (renderer_->isWindowOpen()) {
@@ -41,6 +43,7 @@ int main(int args, char* argv[]) {
 		sf::sleep(sleepDuration);
 	}
 
+	std::cout << "Press any key to continue.";
 	std::cin.get();
 	
 	return EXIT_SUCCESS;
