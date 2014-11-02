@@ -1,6 +1,5 @@
 #include "../commonTypeDefs.h"
-#include "gameObject.h"
-#include "component.h"
+class GameObject;
 
 class gameObjectManager {
 public:
@@ -23,8 +22,8 @@ public:
     void createGameObject(go_type_name _GOName, goc_type_name _GOCList);
 
     ///
-    /// \brief Create GameObject using template database of ready made GOs
-    /// \param Template GameObject name
+    /// \brief Create empty GameObject
+    /// \param GameObject name
     ///
     void createGameObject(go_type_name _GOName);
 
